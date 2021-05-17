@@ -48,7 +48,12 @@ function newSize() {
       alert("Enter the number between 1-64");
       Click();
     } else {
+      const divs = document.querySelectorAll('.grid-item');
+      divs.forEach((div) => {
+        div.remove();
+      });
       makeRows(size, size);
+      leaveTrait();
     }
   }
  }
